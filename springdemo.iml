@@ -21,6 +21,12 @@
           <file>file://$MODULE_DIR$/src/applicationContext.xml</file>
           <file>file://$MODULE_DIR$/src/main/resources/applicationContext.xml</file>
         </fileset>
+        <fileset id="fileset2" name="BeanScope ApplicationContext" removed="false">
+          <file>file://$MODULE_DIR$/src/main/resources/beanScope-applicationContext.xml</file>
+        </fileset>
+        <fileset id="fileset3" name="BeanLifeCycle ApplicationContext" removed="false">
+          <file>file://$MODULE_DIR$/src/main/resources/beanLifeCycle-applicationContext.xml</file>
+        </fileset>
       </configuration>
     </facet>
   </component>
