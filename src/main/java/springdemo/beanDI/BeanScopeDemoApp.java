@@ -1,4 +1,4 @@
-package springdemo;
+package springdemo.beanDI;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 

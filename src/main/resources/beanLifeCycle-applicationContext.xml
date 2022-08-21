@@ -9,12 +9,12 @@
 
     <!-- Define your beans here -->
     <bean id = "myFortune"
-          class="springdemo.HappyFortuneService">
+          class="springdemo.beanDI.HappyFortuneService">
 
     </bean>
 
     <bean id="myCoach"
-          class="springdemo.TrackCoach"
+          class="springdemo.beanDI.TrackCoach"
           init-method="doMyStartupStuff"
           destroy-method="doMyCleanupStuffYoYo">
 

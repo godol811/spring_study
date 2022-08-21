@@ -1,4 +1,4 @@
-package springdemo;
+package springdemo.beanDI;
 
 public class BaseballCoach implements Coach{
 

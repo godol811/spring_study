@@ -1,4 +1,4 @@
-package springdemo;
+package springdemo.beanDI;
 
 public class TrackCoach implements Coach{
 

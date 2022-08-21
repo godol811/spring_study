@@ -1,4 +1,4 @@
-package springdemo;
+package springdemo.beanDI;
 
 public interface FortuneService {
     public String getFortune();
