@@ -2,10 +2,16 @@ package springdemo.annotation;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
+
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
 
 // 컴포넌트를 명시하지 않으면 클래스 이름을 lowerCamel 로 불러오면 불러와진다. (Default Bean)
 @Component
+//모든 인스턴스를 매번 불러온다 - Singleton과 배치됨
+//@Scope("prototype")
 public class TennisCoach implements Coach{
 
     /**
@@ -23,6 +29,19 @@ public class TennisCoach implements Coach{
     public TennisCoach(){
         System.out.println(" >> TennisCoach: inside default constructor");
     }
+
+    // define my init method
+    @PostConstruct
+    public void doMyStartupStuff(){
+        System.out.println(">> TennisCoach: inside of doMyStartupStuff()");
+    }
+    // define my destroy method
+    // PreDestroy는 @Scope가 Prototype은 먹히지 않는다.
+    @PreDestroy
+    public void doMyCleanupStuff(){
+        System.out.println(">> TennisCoach: inside of doMyCleanupStuff()");
+    }
+
 
     //위의 객체인 fortuneService 를 Autowired 하면 객체가 주입이 되어 init 안해도 된다.
     //Spring 4.3 에서부터는 @Autowired를 안써도 자동으로 연결이 되어진다.
